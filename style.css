@@ -1,0 +1,25 @@
+body {
+    background-color: grey;
+    color:#BBBBBB;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+
+.wrapper {
+    margin: 0 auto;
+    width: 220px;
+    background-color: rgb(70, 70, 70);
+    border-radius: 7px;
+    padding: 20px;
+    text-align: left;
+}
+
+.iinput-container {
+    width: 260px;
+    padding: 5px;
+}
+
+.submit-container {
+    text-align: center;
+}
