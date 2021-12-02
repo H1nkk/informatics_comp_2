@@ -51,12 +51,16 @@ else {
 
 }
 
-/*
-function uemail_validation(uemail) {
 
+function uemail_validation(uemail) {
+var mailformat = /[-.\w]+@([\w-]+)+\.[\w-]{2,3}/
 var uemail_len = uemail.value.length;
 
-if (uemail_len < 2)
-
+if (uemail_len < 2 || !(uemail.value.match(mailformat))) {
+    alert("Введите корректный email")
+    return false
 }
-*/
+else {
+    return true
+}
+}
