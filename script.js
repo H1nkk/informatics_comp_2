@@ -68,7 +68,7 @@ function uemail_validation(uemail) { // проверка на валидност
 
 
 function uphnumber_validation(uphnumber) { // проверка на валидность номера телефона пользователя
-    if (uphnumber.value == "") {
+    if (uphnumber.value == "+7 9** *** ** **") {
         alert("Введите номер телефона")
         return false
     }
