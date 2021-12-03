@@ -48,8 +48,9 @@ function uname_validation(uname) { // проверка на валидность
 function usecname_validation(usecname) { // проверка на валидность имени пользователя
 
     var usecname_len = usecname.value.length
-    
-    if (usecname_len == 0 || usecname_len > 100 || !(usecname.value.match(letters))) {
+    var dashes = /^[-]+$/
+
+    if (usecname_len == 0 || usecname_len > 100 || !(usecname.value.match(letters)) || usecname.value.match(dashes)) {
         alert("Введите корректную фамилию.")
         return false
     }
