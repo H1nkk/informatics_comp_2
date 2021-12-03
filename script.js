@@ -13,6 +13,14 @@ function formValidation() {
                 if(uphnumber_validation(uphnumber)) {
                     if(upassword_validation(upassword)) {
 
+                        localStorage.setItem("Username", uname.value)
+                        localStorage.setItem("UserSecondName", usecname.value)
+                        localStorage.setItem("UserEmail", uemail.value)
+                        localStorage.setItem("UserPhoneNumber", uphnumber.value)
+                        localStorage.setItem("UserPassword", upassword.value)
+                        alert("Данные были записаны.")
+                        window.location.reload()
+
                     }
                 }
             }
@@ -86,16 +94,14 @@ function uphnumber_validation(uphnumber) { // проверка на валидн
 
 }
 
-/*
-function upassword_validation(upassword) {
-    var spaces = /^[ ]$/g
 
-    if (upassword.value.match(spaces) || length(upassword.value)) {
-        alert("Пароль не должен содержать пробелов")
+function upassword_validation(upassword) {
+    
+    if (upassword.value.length == 0) {
+        alert("Введите пароль.")
         return false
     }
     else {
         return true
     }
 }
-*/
